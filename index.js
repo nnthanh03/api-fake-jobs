@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
 app.get("/items", (req, res) => {
     const now = new Date();
     const items = {
-        create_time: uuidv1(),
         ts: now.toISOString().slice(0, 19).replace("T", " "),  // Format YYYY-MM-DD HH:mm:ss
         job_id: getRandomElement(col_jobid),
         custom_track: getRandomElement(col_customtrack),
